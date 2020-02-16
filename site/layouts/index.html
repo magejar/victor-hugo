@@ -6,15 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
     <meta name="theme-color" content="#000000"/>
 
-	<script src="https://cdn.jsdelivr.net/npm/algoliasearch@4.0.0/dist/algoliasearch-lite.umd.js" integrity="sha256-MfeKq2Aw9VAkaE9Caes2NOxQf6vUa8Av0JqcUXUGkd0=" crossorigin="anonymous"></script>
 
-	<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@4.0.0/dist/instantsearch.production.min.js" integrity="sha256-6S7q0JJs/Kx4kb/fv0oMjS855QTz5Rc2hh9AkIUjUsk=" crossorigin="anonymous"></script>
-
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.css@7.3.1/themes/reset-min.css" integrity="sha256-t2ATOGCtAIZNnzER679jwcFcKYfLlw01gli6F6oszk8=" crossorigin="anonymous">
-
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.css@7.3.1/themes/algolia-min.css" integrity="sha256-HB49n/BZjuqiCtQQf49OdZn63XuKFaxcIHWf0HNKte8=" crossorigin="anonymous">
-
-	<script src="https://polyfill.io/v3/polyfill.min.js?features=default%2CArray.prototype.find%2CArray.prototype.includes%2CPromise%2CObject.assign%2CObject.entries"></script>
 
 	<style>
 		body, h1 { margin: 0; padding: 0; }
@@ -23,41 +15,28 @@
 </head>
 <body>
 
-<div class="ais-InstantSearch">
-    <h1>Comms Testing Ground</h1>	  
-	<a href="{{ "/tech" | relURL }}"> Check out the tech</a>
-		<div class="left-panel">
-		</div>
 
-		<div class="right-panel">
-			<div id="searchbox" class="ais-SearchBox"></div>
-			<div id="hits"></div>
-			<div id="pagination"></div>
-		</div>
-</div>
-	
-	<script>
-/*const searchClient = algoliasearch('JQB614HS6H', '5bea29a528ac4baf424e2e645ae31b0d');
 
-const search = instantsearch({
-  indexName: 'wp_searchable_posts',
-  searchClient,
-});
+{{ define "main" }}
+    <main aria-role="main">
+      <header class="homepage-header">
+        <h1>{{.Title}}</h1>
+        {{ with .Params.subtitle }}
+        <span class="subtitle">{{.}}</span>
+        {{ end }}
+      </header>
+      <div class="homepage-content">
+        <!-- Note that the content for index.html, as a sort of list page, will pull from content/_index.md -->
+        {{.Content}}
+      </div>
+      <div>
+        {{ range first 10 .Site.RegularPages }}
+            {{ .Render "summary"}}
+        {{ end }}
+      </div>
+    </main>
+{{ end }}
 
-search.addWidgets([
-  instantsearch.widgets.searchBox({
-    container: '#searchbox',
-  }),
-
-  instantsearch.widgets.hits({
-    container: '#hits',
-  })
-]);
-
-search.start();*/
-</script>
-
-  <div id="root"></div>
 
 </body>
 </html>
