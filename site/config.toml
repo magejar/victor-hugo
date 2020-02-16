@@ -1,5 +1,5 @@
 baseURL = "/"
-title = "Magejar Website"
+title = "Magejar"
 languageLang = "en"
 
 paginate = 3
@@ -9,14 +9,14 @@ enableInlineShortcodes = true
 footnoteReturnLinkContents = "^"
 
 [params]
-    author = "Steve Francia"
+    author = "Magejar"
     # logo = "//blog.ertuil.top/avater.png"
     bio = """
     <p> This is BIO. You can write something here. </p>
     <br />
     <p>Also all html tags such as <a href="https://github.com/ertuil/erblog">link</a> are a good here.</p>
     """
-    copyright = "Copyright © 2008–2019, Steve Francia and the Hugo Authors; all rights reserved."
+    copyright = "Copyright © 2018–2020, Magejar and the Hugo Authors; all rights reserved."
 
 
 [[menu.main]]
@@ -42,6 +42,13 @@ footnoteReturnLinkContents = "^"
     name = "About"
     url = "/about/"
     weight = 2
+
+[[menu.footer]]
+    identifier = "contact"
+    name = "Contact"
+    url = "/contact/"
+    weight = 3
+	
 
 [taxonomies]
 category = "categories"
