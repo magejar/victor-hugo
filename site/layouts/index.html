@@ -1,7 +1,3 @@
-{{ define "main" }}
-
-<h1>Hugo with Webpack, Sass, and PostCSS</h1>
-
 <html>
 <head>
 <script src="https://cdn.jsdelivr.net/npm/algoliasearch@4.0.0/dist/algoliasearch-lite.umd.js" integrity="sha256-MfeKq2Aw9VAkaE9Caes2NOxQf6vUa8Av0JqcUXUGkd0=" crossorigin="anonymous"></script>
@@ -34,14 +30,7 @@ search.start();
 </script>
 </head>
 <body>
-<?php 
-
-?>
+<aside id="searchbox"></aside>
+<aside id="hits"></aside>
 </body>
 
-
-
-
-<a href="{{ "/tech" | relURL }}">Check out the tech</a>
-
-{{ end }}
