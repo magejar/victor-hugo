@@ -1,6 +1,7 @@
-baseURL = "https://example.com"
-title = "Example Site"
-theme = "erblog"
+baseURL = "/"
+title = "Magejar Website"
+languageLang = "en"
+
 paginate = 3
 languageCode = "en"
 DefaultContentLanguage = "en"
