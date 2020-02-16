@@ -1,3 +1,4 @@
+{{ define "main" }}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -15,30 +16,25 @@
 
 	<script src="https://polyfill.io/v3/polyfill.min.js?features=default%2CArray.prototype.find%2CArray.prototype.includes%2CPromise%2CObject.assign%2CObject.entries"></script>
 
-
+	<style>
+		body, h1 { margin: 0; padding: 0; }
+		body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; }
+	</style>
 </head>
 <body>
 
 <div class="ais-InstantSearch">
-      <h1>Comms Testing Ground</h1>
+    <h1>Comms Testing Ground</h1>	  
+	<a href="{{ "/tech" | relURL }}"> Check out the tech</a>
+		<div class="left-panel">
+		</div>
 
-      <div class="left-panel">
-        <div id="clear-refinements"></div>
-
-        <h2>Batch</h2>
-        <div id="batch-refinement"></div>
-		<h2>Sender</h2>
-        <div id="sender-refinement"></div>
-		<h2>Date</h2>
-        <div class="slider"><div id="range-slider"></div></div>
-      </div>
-
-      <div class="right-panel">
-        <div id="searchbox" class="ais-SearchBox"></div>
-        <div id="hits"></div>
-        <div id="pagination"></div>
-      </div>
-    </div>
+		<div class="right-panel">
+			<div id="searchbox" class="ais-SearchBox"></div>
+			<div id="hits"></div>
+			<div id="pagination"></div>
+		</div>
+</div>
 	
 	<script>
 const searchClient = algoliasearch('JQB614HS6H', '5bea29a528ac4baf424e2e645ae31b0d');
@@ -63,3 +59,4 @@ search.start();
 
 </body>
 </html>
+{{ end }}
